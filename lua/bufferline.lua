@@ -31,6 +31,7 @@ local M = {
   get_elements = commands.get_elements,
   close_with_pick = commands.close_with_pick,
   close_in_direction = commands.close_in_direction,
+  close_current = commands.close_current,
   rename_tab = commands.rename_tab,
   close_others = commands.close_others,
   unpin_and_close = commands.unpin_and_close,
@@ -158,6 +159,7 @@ local function setup_commands()
   command("BufferLinePickClose", function() M.close_with_pick() end)
   command("BufferLineCycleNext", function() M.cycle(1) end)
   command("BufferLineCyclePrev", function() M.cycle(-1) end)
+  command("BufferLineCloseCurrent", function() M.close_current() end)
   command("BufferLineCloseRight", function() M.close_in_direction("right") end)
   command("BufferLineCloseLeft", function() M.close_in_direction("left") end)
   command("BufferLineCloseOthers", function() M.close_others() end)

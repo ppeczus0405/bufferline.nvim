@@ -243,6 +243,16 @@ function M.close_in_direction(direction)
   ui.refresh()
 end
 
+-- Close current buffer
+function M.close_current()
+  local index = M.get_current_element_index(state)
+  if not index then return end
+  for i, item in ipairs(state.components) do
+    if i == index then delete_element(item.id) end
+  end
+  ui.refresh()
+end
+
 --Close other buffers
 function M.close_others()
   local index = M.get_current_element_index(state)
