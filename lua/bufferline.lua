@@ -29,6 +29,7 @@ local M = {
   sort_by = commands.sort_by,
   pick = commands.pick,
   get_elements = commands.get_elements,
+  tabs_count = commands.tabs_count,
   close_with_pick = commands.close_with_pick,
   close_in_direction = commands.close_in_direction,
   close_current = commands.close_current,
@@ -180,6 +181,11 @@ local function setup_commands()
     nargs = 1,
     complete = groups.complete,
   })
+end
+
+function M.refresh_state()
+  toggle_bufferline()
+  bufferline()
 end
 
 ---@param conf bufferline.UserConfig?

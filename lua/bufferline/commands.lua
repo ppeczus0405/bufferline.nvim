@@ -226,6 +226,9 @@ function M.get_elements()
   }
 end
 
+-- Return number of tabs
+function M.tabs_count() return #state.components end
+
 ---@alias Direction "'left'" | "'right'"
 ---Close all elements to the left or right of the current buffer
 ---@param direction Direction
