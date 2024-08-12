@@ -54,6 +54,7 @@
 ---@field public duplicates_across_groups? boolean
 ---@field public enforce_regular_tabs? boolean
 ---@field public always_show_bufferline? boolean
+---@field public auto_toggle_bufferline? boolean
 ---@field public persist_buffer_sort? boolean
 ---@field public move_wraps_at_ends? boolean
 ---@field public max_prefix_length? number
@@ -61,6 +62,7 @@
 ---@field public diagnostics? boolean | 'nvim_lsp' | 'coc'
 ---@field public diagnostics_indicator? bufferline.DiagnosticIndicator
 ---@field public diagnostics_update_in_insert? boolean
+---@field public diagnostics_update_on_event? boolean
 ---@field public offsets? table[]
 ---@field public groups? bufferline.GroupOpts
 ---@field public themable? boolean
